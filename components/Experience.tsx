@@ -6,7 +6,7 @@ const experiences = [
     company: "Mastercard",
     location: "Pune, India",
     date: "May 2022 – Aug 2025",
-    color: "bg-purple-DEFAULT",
+    color: "bg-indigo-DEFAULT",
     bullets: [
       "Architected and launched a Merchant Onboarding API using Java Spring Boot & PostgreSQL, enabling seamless integration for merchants across 80+ global markets.",
       "Re-engineered the real-time notification system using Kafka and Redis, achieving a 10× reduction in P99 latency (320ms → 28ms).",
@@ -15,11 +15,11 @@ const experiences = [
       "Mentored 3 junior engineers; drove adoption of contract-first API design using OpenAPI, cutting integration bugs by 35%.",
     ],
     tags: [
-      { label: "Java", color: "bg-purple-DEFAULT/20 text-purple-light border-purple-DEFAULT/30" },
-      { label: "Spring Boot", color: "bg-purple-DEFAULT/20 text-purple-light border-purple-DEFAULT/30" },
-      { label: "Kubernetes", color: "bg-teal-DEFAULT/20 text-teal-light border-teal-DEFAULT/30" },
-      { label: "Kafka", color: "bg-teal-DEFAULT/20 text-teal-light border-teal-DEFAULT/30" },
-      { label: "Azure", color: "bg-green-500/20 text-green-300 border-green-500/30" },
+      { label: "Java", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
+      { label: "Spring Boot", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
+      { label: "Kubernetes", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
+      { label: "Kafka", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
+      { label: "Azure", color: "bg-amber-DEFAULT/15 text-amber-light border-amber-DEFAULT/30" },
     ],
   },
   {
@@ -27,16 +27,16 @@ const experiences = [
     company: "Veritas Technologies",
     location: "Pune, India",
     date: "Jan 2022 – May 2022",
-    color: "bg-teal-DEFAULT",
+    color: "bg-emerald-DEFAULT",
     bullets: [
       "Contributed to the NetBackup CloudPoint data protection platform, developing SQL query optimizations that reduced backup metadata retrieval time by 25%.",
       "Built automated regression tests for database backup & recovery workflows using Python, increasing test coverage by 30%.",
       "Debugged and resolved critical data consistency issues in distributed snapshot management.",
     ],
     tags: [
-      { label: "Python", color: "bg-purple-DEFAULT/20 text-purple-light border-purple-DEFAULT/30" },
-      { label: "SQL", color: "bg-teal-DEFAULT/20 text-teal-light border-teal-DEFAULT/30" },
-      { label: "C++", color: "bg-green-500/20 text-green-300 border-green-500/30" },
+      { label: "Python", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
+      { label: "SQL", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
+      { label: "C++", color: "bg-amber-DEFAULT/15 text-amber-light border-amber-DEFAULT/30" },
     ],
   },
   {
@@ -44,15 +44,15 @@ const experiences = [
     company: "Mastercard",
     location: "Pune, India",
     date: "May 2021 – Jul 2021",
-    color: "bg-pink-DEFAULT",
+    color: "bg-amber-DEFAULT",
     bullets: [
       "Designed and shipped a real-time dashboard for internal transaction analytics using React and D3.js, giving the ops team instant visibility into processing pipelines.",
       "Integrated the dashboard with backend REST APIs, improving alert response time by 60% and earning a full-time return offer.",
     ],
     tags: [
-      { label: "React", color: "bg-purple-DEFAULT/20 text-purple-light border-purple-DEFAULT/30" },
-      { label: "D3.js", color: "bg-teal-DEFAULT/20 text-teal-light border-teal-DEFAULT/30" },
-      { label: "Java", color: "bg-pink-DEFAULT/20 text-pink-300 border-pink-DEFAULT/30" },
+      { label: "React", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
+      { label: "D3.js", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
+      { label: "Java", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
     ],
   },
 ];
@@ -62,7 +62,7 @@ export default function Experience() {
     <section id="experience" className="py-24 bg-bg">
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
-          <p className="font-mono text-xs text-teal-DEFAULT tracking-widest uppercase mb-3">
+          <p className="font-mono text-xs text-emerald-DEFAULT tracking-widest uppercase mb-3">
             // work experience
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
@@ -85,10 +85,10 @@ export default function Experience() {
                   </div>
 
                   {/* Card */}
-                  <div className="p-6 rounded-xl bg-surface border border-border hover:border-purple-DEFAULT/40 transition-all duration-300">
+                  <div className="p-6 rounded-2xl glass border border-border hover:border-indigo-DEFAULT/40 transition-all duration-300">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
                       <div>
-                        <h3 className="text-base font-semibold text-[#e2e8f0]">
+                        <h3 className="text-base font-semibold text-text">
                           {exp.title}
                         </h3>
                         <p className="text-sm text-muted mt-0.5">
@@ -103,8 +103,8 @@ export default function Experience() {
                     <ul className="space-y-2 mb-4">
                       {exp.bullets.map((b) => (
                         <li key={b} className="text-sm text-dim leading-relaxed flex gap-2">
-                          <span className="text-teal-DEFAULT mt-1 flex-shrink-0">›</span>
-                          <span dangerouslySetInnerHTML={{ __html: b.replace(/(\d+[\+×%][\w\s]*|80\+|15\+|3[\s]junior)/g, '<strong class="text-[#e2e8f0]">$&</strong>') }} />
+                          <span className="text-emerald-DEFAULT mt-1 flex-shrink-0">›</span>
+                          <span dangerouslySetInnerHTML={{ __html: b.replace(/(\d+[\+×%][\w\s]*|80\+|15\+|3[\s]junior)/g, '<strong class="text-text">$&</strong>') }} />
                         </li>
                       ))}
                     </ul>

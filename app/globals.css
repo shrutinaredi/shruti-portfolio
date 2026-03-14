@@ -1,50 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #060610;
-  --purple: #7c3aed;
-  --teal: #06b6d4;
-  --pink: #ec4899;
-  --grad: linear-gradient(135deg, #7c3aed, #06b6d4);
-  --grad2: linear-gradient(135deg, #ec4899, #7c3aed);
+  --bg:       #030712;
+  --bg2:      #060b1a;
+  --bg3:      #0a1128;
+  --surface:  rgba(255,255,255,0.03);
+  --border:   rgba(255,255,255,0.08);
+  --indigo:   #6366f1;
+  --indigo-l: #a5b4fc;
+  --emerald:  #10b981;
+  --emerald-l:#34d399;
+  --amber:    #f59e0b;
+  --text:     #f1f5f9;
+  --muted:    #94a3b8;
+  --dim:      #475569;
+
+  --grad:  linear-gradient(135deg, #6366f1, #10b981);
+  --grad2: linear-gradient(135deg, #f59e0b, #6366f1);
+  --grad3: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #10b981 100%);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: #e2e8f0;
+  color: var(--text);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none; /* hide default cursor — custom cursor handles it */
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+/* Restore pointer cursor on interactive elements */
+a, button, [role="button"], [data-cursor] { cursor: pointer; }
 
-/* Gradient text utility */
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--indigo); border-radius: 99px; }
+
+/* Gradient text */
 .grad-text {
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 .grad2-text {
   background: var(--grad2);
   -webkit-background-clip: text;
@@ -52,22 +58,49 @@ body {
   background-clip: text;
 }
 
+/* Gradient border card */
+.grad-border {
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    var(--grad3) border-box;
+  border: 1px solid transparent;
+}
+.grad-border-2 {
+  background:
+    linear-gradient(var(--bg2), var(--bg2)) padding-box,
+    var(--grad3) border-box;
+  border: 1px solid transparent;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
 /* Selection */
-::selection {
-  background: rgba(124, 58, 237, 0.3);
-  color: #e2e8f0;
+::selection { background: rgba(99,102,241,0.3); color: var(--text); }
+
+/* Focus */
+:focus-visible { outline: 2px solid var(--emerald); outline-offset: 2px; }
+
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(rgba(99,102,241,0.15) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
-/* Focus visible for accessibility */
-:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 2px;
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
 }
 
-/* Grid background pattern */
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
+/* Glow effects */
+.glow-indigo { box-shadow: 0 0 40px rgba(99,102,241,0.15); }
+.glow-emerald { box-shadow: 0 0 40px rgba(16,185,129,0.15); }
