@@ -23,9 +23,9 @@
   --amber-l:   #fbbf24;
 
   /* Neutral Text */
-  --text:      #fafafa;
-  --muted:     #a3a3a3;
-  --dim:       #525252;
+  --text:      #fafafa;  /* Bright off-white for primary content */
+  --muted:     #d1d5db;  /* Light gray (Slate 300) for descriptions */
+  --dim:       #94a3b8;  /* Medium gray for less important details */
 
   /* Gradients: Transitioning from Emerald to a deep neutral or Amber */
   /* This creates a high-performance look without any blue shades */
@@ -42,6 +42,7 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; /* Makes thin fonts easier to read on dark backgrounds */
 }
 
 /* Restore pointer cursor on interactive elements */
