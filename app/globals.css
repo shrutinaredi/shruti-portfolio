@@ -7,23 +7,31 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #030712;
-  --bg2:      #060b1a;
-  --bg3:      #0a1128;
+  /* Dark Slate/Neutral Scale - Removing all blue undertones */
+  --bg:       #0a0a0a;  /* Pure dark neutral */
+  --bg2:      #121212;  /* Slightly lighter slate */
+  --bg3:      #1a1a1a;  /* For elevated surfaces */
   --surface:  rgba(255,255,255,0.03);
   --border:   rgba(255,255,255,0.08);
-  --indigo:   #6366f1;
-  --indigo-l: #a5b4fc;
-  --emerald:  #10b981;
-  --emerald-l:#34d399;
-  --amber:    #f59e0b;
-  --text:     #f1f5f9;
-  --muted:    #94a3b8;
-  --dim:      #475569;
 
-  --grad:  linear-gradient(135deg, #6366f1, #10b981);
-  --grad2: linear-gradient(135deg, #f59e0b, #6366f1);
-  --grad3: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #10b981 100%);
+  /* New Primary Brand Color: Emerald (Success/Performance) */
+  --emerald:   #10b981; 
+  --emerald-l: #34d399;
+  
+  /* Secondary Accent: Amber (For highlighting critical impact/metrics) */
+  --amber:     #f59e0b;
+  --amber-l:   #fbbf24;
+
+  /* Neutral Text */
+  --text:      #fafafa;
+  --muted:     #a3a3a3;
+  --dim:       #525252;
+
+  /* Gradients: Transitioning from Emerald to a deep neutral or Amber */
+  /* This creates a high-performance look without any blue shades */
+  --grad:  linear-gradient(135deg, #10b981, #059669); 
+  --grad2: linear-gradient(135deg, #f59e0b, #d97706);
+  --grad3: linear-gradient(135deg, #10b981 0%, #34d399 50%, #f59e0b 100%);
 }
 
 html { scroll-behavior: smooth; }
@@ -39,10 +47,10 @@ body {
 /* Restore pointer cursor on interactive elements */
 a, button, [role="button"], [data-cursor] { cursor: pointer; }
 
-/* Scrollbar */
+/* Scrollbar - Updated to Emerald */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--indigo); border-radius: 99px; }
+::-webkit-scrollbar-thumb { background: var(--emerald); border-radius: 99px; }
 
 /* Gradient text */
 .grad-text {
@@ -58,7 +66,7 @@ a, button, [role="button"], [data-cursor] { cursor: pointer; }
   background-clip: text;
 }
 
-/* Gradient border card */
+/* Gradient border card - Updated for the new theme */
 .grad-border {
   background:
     linear-gradient(var(--bg), var(--bg)) padding-box,
@@ -79,15 +87,15 @@ a, button, [role="button"], [data-cursor] { cursor: pointer; }
   border: 1px solid rgba(255,255,255,0.07);
 }
 
-/* Selection */
-::selection { background: rgba(99,102,241,0.3); color: var(--text); }
+/* Selection - Switched to Emerald theme */
+::selection { background: rgba(16,185,129,0.3); color: var(--text); }
 
-/* Focus */
+/* Focus - Emerald outline */
 :focus-visible { outline: 2px solid var(--emerald); outline-offset: 2px; }
 
-/* Dot grid background */
+/* Dot grid background - Subtle Emerald tint */
 .dot-grid {
-  background-image: radial-gradient(rgba(99,102,241,0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(16,185,129,0.1) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -101,6 +109,6 @@ a, button, [role="button"], [data-cursor] { cursor: pointer; }
   opacity: 0.4;
 }
 
-/* Glow effects */
-.glow-indigo { box-shadow: 0 0 40px rgba(99,102,241,0.15); }
+/* Glow effects - Replacing indigo with emerald and amber */
 .glow-emerald { box-shadow: 0 0 40px rgba(16,185,129,0.15); }
+.glow-amber { box-shadow: 0 0 40px rgba(245,158,11,0.1); }
