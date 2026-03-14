@@ -37,7 +37,7 @@ export function SecretTerminal({ onClose }: Props) {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape" || e.key === "`") onClose();
+      if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);

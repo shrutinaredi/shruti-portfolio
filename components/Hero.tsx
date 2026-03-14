@@ -64,10 +64,10 @@ export default function Hero() {
             </motion.div>
 
             <motion.h1 variants={container} initial="hidden" animate="show"
-              className="text-5xl md:text-7xl font-bold leading-[1.02] tracking-tight mb-5"
+              className="text-5xl md:text-7xl font-bold leading-[1.15] tracking-tight mb-5 overflow-visible pb-2"
             >
               {["Shruti", "Agarwal"].map((w, i) => (
-                <motion.span key={w} variants={word} className={`block ${i === 1 ? "grad-text" : ""}`}>{w}</motion.span>
+                <motion.span key={w} variants={word} className={`block overflow-visible ${i === 1 ? "grad-text" : ""}`}>{w}</motion.span>
               ))}
             </motion.h1>
 

@@ -31,8 +31,8 @@ export default {
 
         // Text Scale
         text:  "#fafafa", // Off-white for clarity
-        muted: "#a3a3a3", // Neutral grey
-        dim:   "#525252", // Darker neutral
+        muted: "#d1d5db", // Light grey — readable on dark bg
+        dim:   "#94a3b8", // Medium grey — readable on dark bg
       },
       fontFamily: {
         // Keeps the "Systems Engineer" aesthetic

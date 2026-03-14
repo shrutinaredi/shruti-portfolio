@@ -46,13 +46,13 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* CTA — Hire Me */}
-     <a 
-  href="mailto:sagarwal235@wisc.edu?subject=Hiring Inquiry - Full Stack SDE&body=Hi Shruti,"
-  className="bg-emerald px-6 py-3 rounded-lg font-semibold text-text hover:bg-emerald-light transition-colors"
->
-  Hire Me
-</a>
+      {/* CTA — Hire Me (desktop only; mobile menu has its own) */}
+      <a
+        href="mailto:sagarwal235@wisc.edu?subject=Hiring%20Inquiry&body=Hi%20Shruti%2C"
+        className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-DEFAULT text-white font-semibold text-sm hover:bg-emerald-dark transition-all duration-200 hover:-translate-y-0.5"
+      >
+        Hire Me
+      </a>
 
       {/* Hamburger */}
       <button className="md:hidden flex flex-col gap-1.5 p-2" onClick={() => setMenuOpen((o) => !o)} aria-label="Toggle menu">
@@ -78,8 +78,8 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="mailto:sagarwal235@wisc.edu"
-              className="text-sm font-semibold px-4 py-2.5 rounded-xl bg-indigo-DEFAULT text-white text-center"
+            <a href="mailto:sagarwal235@wisc.edu?subject=Hiring%20Inquiry&body=Hi%20Shruti%2C"
+              className="text-sm font-semibold px-4 py-2.5 rounded-xl bg-emerald-DEFAULT text-white text-center"
             >
               Hire Me
             </a>

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -40,7 +41,9 @@ export default function Home() {
       <Footer />
 
       {/* Secret Overlay */}
-      {showSecret && <SecretTerminal onClose={() => setShowSecret(false)} />}
+      <AnimatePresence>
+        {showSecret && <SecretTerminal key="terminal" onClose={() => setShowSecret(false)} />}
+      </AnimatePresence>
     </main>
   );
 }
