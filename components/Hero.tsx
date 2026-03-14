@@ -34,7 +34,7 @@ const CODE_LINES = [
 ];
 
 const stats = [
-  { value: "3+",  label: "Years at Mastercard" },
+  { value: "3",  label: "Years as SDE at Mastercard" },
   { value: "10x", label: "Latency Reduction"   },
   { value: "4.0", label: "GPA @ UW-Madison"    },
 ];
@@ -60,7 +60,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-DEFAULT opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-DEFAULT" />
               </span>
-              MS CS @ UW-Madison &nbsp;&middot;&nbsp; Open to Summer 2026
+              MS CS @ UW-Madison &nbsp;&middot;&nbsp; Open to Summer/Fall 2026 internships
             </motion.div>
 
             <motion.h1 variants={container} initial="hidden" animate="show"
@@ -75,14 +75,14 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.55 }}
               className="text-lg md:text-xl text-muted mb-3 font-medium"
             >
-              <span className="text-text font-semibold">Software Engineer</span> &amp; ML Systems Researcher
+              <span className="text-text font-semibold">Software Engineer</span> eith builder mindset.
             </motion.p>
 
             <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.68 }}
               className="text-dim leading-relaxed max-w-md mb-10"
             >
-              I build distributed systems at scale and push the limits of ML infrastructure. Prev:{" "}
+              CS graduate student at the University of Wisconsin–Madison and former Software Engineer at Mastercard with 3 years of experience building scalable backend systems and shipping production features. Seeking Summer and Fall 2026 Software Engineering internships. Prev:{" "}
               <span className="text-text font-semibold">Mastercard SDE II</span>.
             </motion.p>
 
