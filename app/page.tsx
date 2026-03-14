@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -8,10 +10,24 @@ import Education from "@/components/Education";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { SecretTerminal } from "@/components/SecretTerminal";
 
 export default function Home() {
+  const [showSecret, setShowSecret] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "`") {
+        setShowSecret((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
-    <main>
+    <main className="relative">
       <Navbar />
       <Hero />
       <About />
@@ -22,6 +38,9 @@ export default function Home() {
       <Achievements />
       <Contact />
       <Footer />
+
+      {/* Secret Overlay */}
+      {showSecret && <SecretTerminal onClose={() => setShowSecret(false)} />}
     </main>
   );
 }
