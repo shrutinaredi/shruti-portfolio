@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 
 const highlights = [
-  { icon: "🧠", title: "ML Systems & LLM Research",         desc: "Self-correcting agents with vLLM, LangGraph & RAG pipelines" },
+  { icon: "🧠", title: "Full Stack Developer",               desc: "Backend systems at Mastercard using Java & Spring Boot, revamped UI with JavaScript & Angular" },
   { icon: "⚡", title: "GPU & High-Performance Computing",   desc: "CUDA kernels, libcudf, parallel algorithms for data-intensive workloads" },
   { icon: "☁️", title: "Cloud-Native Distributed Systems",  desc: "Kubernetes, Kafka, Spring Boot microservices on Azure & AWS" },
   { icon: "🔬", title: "Published Researcher",              desc: "Top 3 Paper Award at ICDMAI 2022 — NLP & deep learning" },
