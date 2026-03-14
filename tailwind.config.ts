@@ -8,29 +8,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg:      "#030712",
-        bg2:     "#060b1a",
-        bg3:     "#0a1128",
+        // Deep Neutral/Slate background scale (No blue undertones)
+        bg:      "#0a0a0a", // Pure dark neutral
+        bg2:     "#121212", // Elevated slate
+        bg3:     "#1a1a1a", // Deep surface
         surface: "rgba(255,255,255,0.03)",
         border:  "rgba(255,255,255,0.08)",
-        indigo: {
-          DEFAULT: "#6366f1",
-          light:   "#a5b4fc",
-          dark:    "#4f46e5",
-        },
+        
+        // Primary Brand Color: Emerald (High Performance)
         emerald: {
           DEFAULT: "#10b981",
           light:   "#34d399",
+          dark:    "#059669",
         },
+
+        // High-Impact Accent: Amber (Use for stats like "97%" or "55%")
         amber: {
           DEFAULT: "#f59e0b",
           light:   "#fcd34d",
+          dark:    "#d97706",
         },
-        text:  "#f1f5f9",
-        muted: "#94a3b8",
-        dim:   "#475569",
+
+        // Text Scale
+        text:  "#fafafa", // Off-white for clarity
+        muted: "#a3a3a3", // Neutral grey
+        dim:   "#525252", // Darker neutral
       },
       fontFamily: {
+        // Keeps the "Systems Engineer" aesthetic
         mono: ["JetBrains Mono", "monospace"],
       },
       animation: {
