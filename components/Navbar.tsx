@@ -69,19 +69,18 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-bg2/95 backdrop-blur-xl border-b border-border px-6 py-4 flex flex-col gap-4 md:hidden"
-          >
+            className="absolute top-full left-0 right-0 bg-bg2/95 backdrop-blur-xl border-b border-border px-6 py-4 flex flex-col gap-4 md:hidden">
             {links.map((link) => (
               <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}
-                className="text-muted hover:text-emerald-light transition-colors py-1"
-              >
+                className="text-muted hover:text-emerald-light transition-colors py-1">
                 {link.label}
               </a>
             ))}
-            <a href="mailto:sagarwal235@wisc.edu?subject=Hiring%20Inquiry&body=Hi%20Shruti%2C"
-              className="text-sm font-semibold px-4 py-2.5 rounded-xl bg-emerald text-white text-center"
-            >
-              Hire Me
+            <a 
+  href="mailto:sagarwal235@wisc.edu?subject=Hiring Inquiry&body=Hi Shruti,"
+  className="bg-[#10b981] text-black px-4 py-2 rounded-md font-bold hover:bg-[#059669] transition-all">
+  Hire Me
+</a>
             </a>
           </motion.div>
         )}
