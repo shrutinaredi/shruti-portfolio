@@ -47,12 +47,12 @@ export default function Navbar() {
       </ul>
 
       {/* CTA — Hire Me */}
-      <a
-        href="mailto:sagarwal235@wisc.edu"
-        className="hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-xl bg-indigo-DEFAULT hover:bg-indigo-dark text-white transition-all duration-200 hover:shadow-lg hover:shadow-indigo-DEFAULT/30 hover:-translate-y-0.5"
-      >
-        Hire Me
-      </a>
+     <a 
+  href="mailto:sagarwal235@wisc.edu?subject=Hiring Inquiry - Full Stack SDE&body=Hi Shruti,"
+  className="bg-emerald px-6 py-3 rounded-lg font-semibold text-text hover:bg-emerald-light transition-colors"
+>
+  Hire Me
+</a>
 
       {/* Hamburger */}
       <button className="md:hidden flex flex-col gap-1.5 p-2" onClick={() => setMenuOpen((o) => !o)} aria-label="Toggle menu">
