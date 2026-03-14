@@ -75,7 +75,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.55 }}
               className="text-lg md:text-xl text-muted mb-3 font-medium"
             >
-              <span className="text-text font-semibold">Software Engineer</span> eith builder mindset.
+              <span className="text-text font-semibold">Software Engineer</span> with builder mindset.
             </motion.p>
 
             <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
