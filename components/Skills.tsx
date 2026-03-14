@@ -14,7 +14,7 @@ export default function Skills() {
     <section id="skills" className="py-24 bg-bg">
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
-          <p className="font-mono text-xs text-emerald-DEFAULT tracking-widest uppercase mb-3">// technical skills</p>
+          <p className="font-mono text-xs text-emerald tracking-widest uppercase mb-3">// technical skills</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
             What I Work <span className="grad-text">With</span>
           </h2>
@@ -26,15 +26,15 @@ export default function Skills() {
             <ScrollReveal key={cat.name} delay={(i % 4) * 0.08}
               className={cat.span === "col-span-2" ? "col-span-2" : ""}
             >
-              <div className="p-5 rounded-2xl glass border border-border hover:border-indigo-DEFAULT/30 transition-all duration-300 h-full group">
+              <div className="p-5 rounded-2xl glass border border-border hover:border-emerald/30 transition-all duration-300 h-full group">
                 <div className="flex items-center gap-2.5 mb-4">
                   <span className="text-xl">{cat.icon}</span>
-                  <h3 className="text-sm font-semibold text-text group-hover:text-indigo-light transition-colors">{cat.name}</h3>
+                  <h3 className="text-sm font-semibold text-text group-hover:text-emerald-light transition-colors">{cat.name}</h3>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {cat.skills.map((skill) => (
                     <span key={skill}
-                      className="text-xs px-2.5 py-1 rounded-lg bg-bg2 border border-border text-muted hover:border-indigo-DEFAULT/40 hover:text-indigo-light transition-all duration-200"
+                      className="text-xs px-2.5 py-1 rounded-lg bg-bg2 border border-border text-muted hover:border-emerald/40 hover:text-emerald-light transition-all duration-200"
                     >
                       {skill}
                     </span>

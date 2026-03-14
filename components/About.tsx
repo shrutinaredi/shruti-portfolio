@@ -16,7 +16,7 @@ export default function About() {
           {/* Text */}
           <div>
             <ScrollReveal>
-              <p className="font-mono text-xs text-emerald-DEFAULT tracking-widest uppercase mb-3">// about me</p>
+              <p className="font-mono text-xs text-emerald tracking-widest uppercase mb-3">// about me</p>
               <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
                 Engineer. Researcher. <span className="grad-text">Problem Solver.</span>
               </h2>
@@ -46,9 +46,9 @@ export default function About() {
           <div className="grid grid-cols-2 gap-3">
             {highlights.map((h, i) => (
               <ScrollReveal key={h.title} delay={i * 0.08} direction="right">
-                <div className="p-4 rounded-2xl glass border border-border hover:border-indigo-DEFAULT/30 transition-all duration-300 h-full group">
+                <div className="p-4 rounded-2xl glass border border-border hover:border-emerald/30 transition-all duration-300 h-full group">
                   <span className="text-2xl mb-3 block">{h.icon}</span>
-                  <h4 className="text-xs font-semibold text-text mb-1.5 leading-snug group-hover:text-indigo-light transition-colors">{h.title}</h4>
+                  <h4 className="text-xs font-semibold text-text mb-1.5 leading-snug group-hover:text-emerald-light transition-colors">{h.title}</h4>
                   <p className="text-xs text-dim leading-relaxed">{h.desc}</p>
                 </div>
               </ScrollReveal>

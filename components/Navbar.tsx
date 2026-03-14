@@ -39,7 +39,7 @@ export default function Navbar() {
       <ul className="hidden md:flex items-center gap-8">
         {links.map((link) => (
           <li key={link.href}>
-            <a href={link.href} className="text-sm text-muted hover:text-indigo-light transition-colors duration-200 font-medium">
+            <a href={link.href} className="text-sm text-muted hover:text-emerald-light transition-colors duration-200 font-medium">
               {link.label}
             </a>
           </li>
@@ -49,7 +49,7 @@ export default function Navbar() {
       {/* CTA — Hire Me (desktop only; mobile menu has its own) */}
       <a
         href="mailto:sagarwal235@wisc.edu?subject=Hiring%20Inquiry&body=Hi%20Shruti%2C"
-        className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-DEFAULT text-white font-semibold text-sm hover:bg-emerald-dark transition-all duration-200 hover:-translate-y-0.5"
+        className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald text-white font-semibold text-sm hover:bg-emerald-dark transition-all duration-200 hover:-translate-y-0.5"
       >
         Hire Me
       </a>
@@ -73,13 +73,13 @@ export default function Navbar() {
           >
             {links.map((link) => (
               <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}
-                className="text-muted hover:text-indigo-light transition-colors py-1"
+                className="text-muted hover:text-emerald-light transition-colors py-1"
               >
                 {link.label}
               </a>
             ))}
             <a href="mailto:sagarwal235@wisc.edu?subject=Hiring%20Inquiry&body=Hi%20Shruti%2C"
-              className="text-sm font-semibold px-4 py-2.5 rounded-xl bg-emerald-DEFAULT text-white text-center"
+              className="text-sm font-semibold px-4 py-2.5 rounded-xl bg-emerald text-white text-center"
             >
               Hire Me
             </a>

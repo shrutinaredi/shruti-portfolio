@@ -6,7 +6,7 @@ const experiences = [
     company: "Mastercard",
     location: "Pune, India",
     date: "May 2022 – Aug 2025",
-    color: "bg-indigo-DEFAULT",
+    color: "bg-emerald",
     bullets: [
       "Architected and launched a Merchant Onboarding API using Java Spring Boot & PostgreSQL, enabling seamless integration for merchants across 80+ global markets.",
       "Re-engineered the real-time notification system using Kafka and Redis, achieving a 10× reduction in P99 latency (320ms → 28ms).",
@@ -15,11 +15,11 @@ const experiences = [
       "Mentored 3 junior engineers; drove adoption of contract-first API design using OpenAPI, cutting integration bugs by 35%.",
     ],
     tags: [
-      { label: "Java", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
-      { label: "Spring Boot", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
-      { label: "Kubernetes", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
-      { label: "Kafka", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
-      { label: "Azure", color: "bg-amber-DEFAULT/15 text-amber-light border-amber-DEFAULT/30" },
+      { label: "Java", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "Spring Boot", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "Kubernetes", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "Kafka", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "Azure", color: "bg-amber/15 text-amber-light border-amber/30" },
     ],
   },
   {
@@ -27,16 +27,16 @@ const experiences = [
     company: "Veritas Technologies",
     location: "Pune, India",
     date: "Jan 2022 – May 2022",
-    color: "bg-emerald-DEFAULT",
+    color: "bg-emerald",
     bullets: [
       "Contributed to the NetBackup CloudPoint data protection platform, developing SQL query optimizations that reduced backup metadata retrieval time by 25%.",
       "Built automated regression tests for database backup & recovery workflows using Python, increasing test coverage by 30%.",
       "Debugged and resolved critical data consistency issues in distributed snapshot management.",
     ],
     tags: [
-      { label: "Python", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
-      { label: "SQL", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
-      { label: "C++", color: "bg-amber-DEFAULT/15 text-amber-light border-amber-DEFAULT/30" },
+      { label: "Python", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "SQL", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "C++", color: "bg-amber/15 text-amber-light border-amber/30" },
     ],
   },
   {
@@ -44,15 +44,15 @@ const experiences = [
     company: "Mastercard",
     location: "Pune, India",
     date: "May 2021 – Jul 2021",
-    color: "bg-amber-DEFAULT",
+    color: "bg-amber",
     bullets: [
       "Designed and shipped a real-time dashboard for internal transaction analytics using React and D3.js, giving the ops team instant visibility into processing pipelines.",
       "Integrated the dashboard with backend REST APIs, improving alert response time by 60% and earning a full-time return offer.",
     ],
     tags: [
-      { label: "React", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
-      { label: "D3.js", color: "bg-emerald-DEFAULT/15 text-emerald-light border-emerald-DEFAULT/30" },
-      { label: "Java", color: "bg-indigo-DEFAULT/15 text-indigo-light border-indigo-DEFAULT/30" },
+      { label: "React", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "D3.js", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
+      { label: "Java", color: "bg-emerald/15 text-emerald-light border-emerald/30" },
     ],
   },
 ];
@@ -62,7 +62,7 @@ export default function Experience() {
     <section id="experience" className="py-24 bg-bg">
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
-          <p className="font-mono text-xs text-emerald-DEFAULT tracking-widest uppercase mb-3">
+          <p className="font-mono text-xs text-emerald tracking-widest uppercase mb-3">
             // work experience
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
@@ -85,7 +85,7 @@ export default function Experience() {
                   </div>
 
                   {/* Card */}
-                  <div className="p-6 rounded-2xl glass border border-border hover:border-indigo-DEFAULT/40 transition-all duration-300">
+                  <div className="p-6 rounded-2xl glass border border-border hover:border-emerald/40 transition-all duration-300">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
                       <div>
                         <h3 className="text-base font-semibold text-text">
@@ -103,7 +103,7 @@ export default function Experience() {
                     <ul className="space-y-2 mb-4">
                       {exp.bullets.map((b) => (
                         <li key={b} className="text-sm text-dim leading-relaxed flex gap-2">
-                          <span className="text-emerald-DEFAULT mt-1 flex-shrink-0">›</span>
+                          <span className="text-emerald mt-1 flex-shrink-0">›</span>
                           <span dangerouslySetInnerHTML={{ __html: b.replace(/(\d+[\+×%][\w\s]*|80\+|15\+|3[\s]junior)/g, '<strong class="text-text">$&</strong>') }} />
                         </li>
                       ))}

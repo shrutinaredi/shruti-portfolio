@@ -33,7 +33,7 @@ export default function Projects() {
     <section id="projects" className="py-24 bg-bg2">
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
-          <p className="font-mono text-xs text-emerald-DEFAULT tracking-widest uppercase mb-3">// projects</p>
+          <p className="font-mono text-xs text-emerald tracking-widest uppercase mb-3">// projects</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
             Things I&apos;ve <span className="grad-text">Built</span>
           </h2>
@@ -55,7 +55,7 @@ export default function Projects() {
                   <div className="flex items-center justify-between mb-5">
                     <span className="text-3xl">{p.icon}</span>
                     <a href={p.github} target="_blank" rel="noopener noreferrer"
-                      className="text-xs text-dim hover:text-indigo-light border border-border hover:border-indigo-DEFAULT/50 px-3 py-1.5 rounded-lg transition-all duration-200 font-mono"
+                      className="text-xs text-dim hover:text-emerald-light border border-border hover:border-emerald/50 px-3 py-1.5 rounded-lg transition-all duration-200 font-mono"
                     >
                       ↗ GitHub
                     </a>
@@ -77,7 +77,7 @@ export default function Projects() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
                     {p.tags.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 rounded-lg bg-bg border border-border text-muted hover:border-indigo-DEFAULT/40 hover:text-indigo-light transition-all duration-200">
+                      <span key={t} className="text-xs px-2.5 py-1 rounded-lg bg-bg border border-border text-muted hover:border-emerald/40 hover:text-emerald-light transition-all duration-200">
                         {t}
                       </span>
                     ))}
