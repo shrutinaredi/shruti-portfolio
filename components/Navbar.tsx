@@ -76,11 +76,10 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a 
-  href="mailto:sagarwal235@wisc.edu?subject=Hiring Inquiry&body=Hi Shruti,"
-  className="bg-[#10b981] text-black px-4 py-2 rounded-md font-bold hover:bg-[#059669] transition-all">
-  Hire Me
-</a>
+            <a
+              href="mailto:sagarwal235@wisc.edu?subject=Hiring Inquiry&body=Hi Shruti,"
+              className="bg-[#10b981] text-black px-4 py-2 rounded-md font-bold hover:bg-[#059669] transition-all">
+              Hire Me
             </a>
           </motion.div>
         )}
