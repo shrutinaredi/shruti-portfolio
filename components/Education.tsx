@@ -6,14 +6,14 @@ const education = [
     school: "University of Wisconsin-Madison",
     date: "Aug 2025 – May 2027",
     gpa: "4.0 / 4.0",
-    courses: "Advanced OS, Distributed Systems, Deep Learning Systems, Database Internals, GPU Computing",
+    courses: "Foundational Models, Computer Vision, Database Management Systems, Machine Learning, Data Exploration and Data Cleaning, Artificial intelligence",
   },
   {
     degree: "B.Tech Computer Science",
     school: "Cummins College of Engineering for Women, Pune",
     date: "Aug 2018 – May 2022",
     gpa: "8.8 / 10",
-    courses: "Data Structures & Algorithms, OS, DBMS, Computer Networks, Machine Learning, NLP",
+    courses: "Data Structures & Algorithms, Operating Systems, Object Oriented Programming, Databases, Computer Networks, Machine Learning, Natural Language Processing, Computer Architecture",
   },
 ];
 
