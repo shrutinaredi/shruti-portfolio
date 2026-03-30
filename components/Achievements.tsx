@@ -17,7 +17,7 @@ const achievements = [
   {
     icon: "🎓",
     title: "WeTech Goldman Sachs Scholar",
-    detail: "Awarded to high-achieving women in technology by Goldman Sachs & the Institute of International Education.",
+    detail: "Selected as one of the top 50 students nationwide, for a prestigious 6 months Goldman Sachs Scholarship Program",
     year: "2021",
   },
 ];
