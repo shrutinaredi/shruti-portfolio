@@ -4,7 +4,8 @@ const achievements = [
   {
     icon: "🏆",
     title: "Mastercard Internal Hackathon Winner",
-    detail: "1st place out of 200+ participants. Built an AI-powered fraud detection prototype that reduced false positives by 30%.",
+    detail: "1st place out of 200+ participants. Built a fraud mitigation agent using LangChain and Pinecone to autonomously cross-reference Mastercard's Open Banking APIs, detecting risk signals and flagging anomalous patterns across financial data.
+",
     year: "2025",
   },
   {
